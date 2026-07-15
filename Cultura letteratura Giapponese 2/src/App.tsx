@@ -1,0 +1,16 @@
+import { Route, Routes } from 'react-router-dom'
+import { Layout } from './components/Layout'
+import { Dashboard } from './pages/Dashboard'
+import { CoursePath } from './pages/CoursePath'
+import { LessonPage } from './pages/LessonPage'
+import { GlossaryPage } from './pages/GlossaryPage'
+import { OralPage } from './pages/OralPage'
+import { PlanPage } from './pages/PlanPage'
+import { SettingsPage } from './pages/SettingsPage'
+import { LibraryPage } from './pages/LibraryPage'
+import { TimelinePage } from './pages/TimelinePage'
+import { MapPage } from './pages/MapPage'
+import { PracticePage } from './pages/PracticePage'
+import { ReviewPage } from './pages/ReviewPage'
+
+export function App() { return <Routes><Route element={<Layout/>}><Route index element={<Dashboard/>}/><Route path="percorso" element={<CoursePath/>}/><Route path="lezione/:lessonId" element={<LessonPage/>}/><Route path="atlante" element={<LibraryPage/>}/><Route path="timeline" element={<TimelinePage/>}/><Route path="mappa" element={<MapPage/>}/><Route path="palestra" element={<PracticePage/>}/><Route path="ripasso" element={<ReviewPage/>}/><Route path="glossario" element={<GlossaryPage/>}/><Route path="orale" element={<OralPage/>}/><Route path="piano-48h" element={<PlanPage/>}/><Route path="impostazioni" element={<SettingsPage/>}/><Route path="*" element={<Dashboard/>}/></Route></Routes> }
